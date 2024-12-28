@@ -1,0 +1,324 @@
+head, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#htmlLogo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #0D2F88;
+}
+
+#northPark {
+  position: absolute;
+  left: 140px;
+  font-size: 35px;
+  top: 15px;
+}
+
+#headerPic {
+  position: absolute;
+  left: 13px;
+  top: 8px;
+}
+
+#teachBut {
+  width: 90px;
+  height: auto;
+  position: absolute;
+  left: 1410px;
+  top: 15px;
+}
+
+.teacher {
+  background-color: transparent;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  color: black;
+  height: 50px;
+  width: 160px;
+  border: none;
+  text-align: left;
+  position: relative;
+  left: 762%;
+  top: 35px;
+}
+
+#start {
+  font-family: 'Public Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 60px;
+  position: absolute;
+  top: 115px;
+  left: 30px;
+}
+
+.arrow {
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  height: 15px;
+  width: 15px;
+  right: 30px;
+  bottom: 5px;
+  position: relative;
+  left: 1205px;
+  top: 30px;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+  /* The container <div> - needed to position the dropdown content */
+#htmlTeacherLogin {
+  position: relative;
+  display: inline-block;
+}
+
+.divider {
+  width: 120px;
+  position: relative;
+  left: 10%;
+  border: 0.5px solid #323232;
+}
+
+#styling {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 25px;
+  user-select: none;
+}
+
+.labelCheck input {
+  position: relative;
+  opacity: 0;
+}
+
+.labelCheck .customCheck {
+  position: absolute;
+  top: 8px;
+  left: -10px;
+  height: 12px;
+  width: 12px;
+  background-color: #F8AD55;
+  border-radius: 10px;
+  border: 2px solid #F8AD55;
+  transition: all 0.3s ease-out;
+}
+
+.labelCheck .customCheck::after {
+  position: absolute;
+  content:"";
+  left: 12px;
+  top: 12px;
+  height: 0;
+  width: 0;
+  border-radius: 10px;
+  border-width: 0 3px 3px 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.labelCheck input:checked ~ .customCheck {
+  background-color: white;
+  border-radius: 10px;
+  opacity: 1;
+  border: 2px solid transparent;
+}
+
+.labelCheck input:checked ~ .customCheck::after {
+  opacity: 1;
+  left: -2px;
+  top: -2px;
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  border: 2px solid #F66307;
+  background-color: #F66307;
+}
+
+#htmlTGradesDIV {
+  position: absolute;
+  left: 17%;
+  top: 205px;
+}
+
+#htmlTGrades {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  right: 23px;
+}
+
+.arrowGR {
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  height: 18px;
+  width: 18px;
+  right: 30px;
+  bottom: 5px;
+  position: absolute;
+  left: 67%;
+  top: 52px;
+  transform: rotate(45deg);
+}
+
+#htmlTClubsDIV {
+  position: absolute;
+  top: 205px;
+  left: 43%;
+}
+
+#htmlTClubs {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  right: 23px;
+}
+
+#htmlTClub {
+  font-family: 'Lexend Deca', sans-serif;
+  appearance: none;
+  letter-spacing: 1px;
+  font-size: 25px;
+  padding-left: 25px;;
+  border: none;
+  outline: none;
+}
+
+.dropdownShow {
+  position: absolute;
+  top: 94px;
+  left: -10px;
+  height: 12px;
+  width: 12px;
+  background-color: #F8AD55;
+  border-radius: 10px;
+  border: 2px solid #F8AD55;
+}
+
+.arrowC {
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  height: 18px;
+  width: 18px;
+  right: 30px;
+  bottom: 5px;
+  position: absolute;
+  left: 21%;
+  top: 52px;
+  transform: rotate(45deg);
+}
+
+#htmlTGenderDIV {
+  position: absolute;
+  top: 205px;
+  left: 75%;
+}
+
+#htmlTGender {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+  right: 23px;
+}
+
+.arrowGE {
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  height: 18px;
+  width: 18px;
+  right: 30px;
+  bottom: 5px;
+  position: absolute;
+  left: 72%;
+  top: 52px;
+  transform: rotate(45deg);
+}
+
+/* Dropdown Content (Hidden by Default) */
+#teacherLoginContents {
+  display: none;
+  font-family: 'Red Hat Display', sans-serif;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid black;
+}
+
+/* Links inside the dropdown */
+#teacherLoginContents a {
+  color: black;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+#teacherLoginContents a:hover {background-color: #F49240;}
+
+/* Show the dropdown menu on hover */
+#htmlTeacherLogin:hover #teacherLoginContents {
+  display: inline-block;
+  position: absolute;
+  top: 80px;
+  left: 1225px;
+}
+
+#htmlTeacherLogin:hover + .arrow {
+  transform-origin: center center;
+  transform: rotateZ(225deg);
+  top: 38px;
+}
+
+.submit {
+  background-color: #FA7D2E;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+  height: 164px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  position: absolute;
+  left: 89%;
+  bottom: 31px;
+}
+
+#htmlTAnnouncement {
+  position: absolute;
+  top: 63%;
+  left: 30px;
+}
+
+#instructions {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+#htmlTAnnouncementDetail {
+  font-size: 18px;
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 10px;
+  width: 190%;
+  height: 130px;
+  position: relative;
+  bottom: 18px;
+  border-top: 12px solid #CECECE;
+  background-color: #ECECEC;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  outline: none;
+  resize: none;
+}

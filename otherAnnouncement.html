@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>North Park: Other Announcements</title>
+        <script src="otherAnnouncement.js"></script>
+        <link rel="stylesheet" href="otherAnnouncement.css">
+        <!--IMPORTED FONT CODE-->
+        <!--MONTSERRAT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <!--RED HAT DISPLAY-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+        <!--PUBLIC SANS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap" rel="stylesheet">
+        <!--OPEN SANS EXTRA BOLD-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+        <!--LEXEND DECA-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body onload="gettingAnnouncements()">
+        <!--Top bar with North Park Logo and Name-->
+        <div id="htmlLogo">
+            <img id="headerPic" src="northParkLogo.png" width="120" height="120">
+            <h1 id="northPark">North Park</h1>
+        </div>
+        <!--Right Teacher Log in with Logo-->
+        <img id="teachBut" src="teacherlogin.png" width="100" height="100">
+        <div id="htmlTeacherLogin">
+            <!--Drop-down teacher login options to navigate to pages-->
+            <button class="teacher">Teacher Login</button>
+            <div id="teacherLoginContents">
+                <a href="teacherCreatorPage.html">Announcement Creation Page</a>
+                <div class="divider"></div>
+                <a href="teacherPlanning.html">Planning Calendar</a>
+                <div class="divider"></div>
+                <a href="otherAnnouncement.html">Other Announcements</a>
+                <div class="divider"></div>
+                <a href="schoolLogin.html">Log Out</a>
+            </div>
+        </div>
+        <button class="arrow"></button>
+        <p id="popup">Your Post was successfully saved!</p>
+        <!--Heading of the page "Other Announcements"-->
+        <h1 id="start">Your Other Announcements</h1>
+        <p id="announcements"></p>
+    </body>
+</html>

@@ -1,0 +1,218 @@
+//all of the global variables for the checking of if statements to determince a match
+
+//teacher global variables for each grade
+var teacherGrade9;
+var teacherGrade10;
+var teacherGrade11;
+var teacherGrade12;
+var teacherGradeAll;
+
+//teacher global variables for each gender
+var teacherGenderFemale;
+var teacherGenderMale;
+var teacherGenderOther;
+var teacherGenderAll;
+
+//teacher global variables for each club
+var teacherClub;
+
+//student global variables for each grade
+var studentGrade9;
+var studentGrade10;
+var studentGrade11;
+var studentGrade12;
+var studentGradeAll;
+
+//student global variables for each gender
+var studentGenderFemale;
+var studentGenderMale;
+var studentGenderAll;
+var studentGenderOther;
+
+//student global variables for club and teacher detail
+var studentClub;
+var teacherDetails;
+
+function displayResults() {
+    /*variables are declared for all of the global variables above where the information in the local storage is accessed through the get item property with
+    the specific key for both student and teacher*/
+    teacherGrade9 = localStorage.getItem("teacherGrade9Key");
+    teacherGrade10 = localStorage.getItem("teacherGrade10Key");
+    teacherGrade11 = localStorage.getItem("teacherGrade11Key");
+    teacherGrade12 = localStorage.getItem("teacherGrade12Key");
+
+    teacherGenderFemale = localStorage.getItem("teacherGenderFemaleKey");
+    teacherGenderMale = localStorage.getItem("teacherGenderMaleKey");
+    teacherGenderOther = localStorage.getItem("teacherGenderOtherKey");
+    teacherGenderAll = localStorage.getItem("teacherGenderAllKey");
+    teacherClub = localStorage.getItem("teacherClubKey");
+    teacherDetails = localStorage.getItem("teacherAnnouncementDetailsKey");
+
+    studentGrade9 = localStorage.getItem("studentGrade9Key");
+    studentGrade10 = localStorage.getItem("studentGrade10Key");
+    studentGrade11 = localStorage.getItem("studentGrade11Key");
+    studentGrade12 = localStorage.getItem("studentGrade12Key");
+    studentGradeAll = localStorage.getItem("studentGradeAllKey");
+
+    studentGenderFemale = localStorage.getItem("studentGenderFemaleKey");
+    studentGenderMale = localStorage.getItem("studentGenderMaleKey");
+    studentGenderOther = localStorage.getItem("studentGenderOtherKey");
+    studentGenderAll = localStorage.getItem("studentGenderAllKey");
+    studentClub = localStorage.getItem("studentClubKey");
+
+
+    // this is the most recent change that I have made
+    if((studentGrade9 === "true" && studentGrade9 === teacherGrade9) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGrade10 === "true" && studentGrade10 === teacherGrade10) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGrade11 === "true" && studentGrade11 === teacherGrade11) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGrade12 === "true" && studentGrade12 === teacherGrade12) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGenderFemale === "true" && studentGenderFemale === studentGenderFemale) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGenderMale === "true" && studentGenderMale === studentGenderMale) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGenderOther === "true" && studentGenderOther === studentGenderOther) && teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if(teacherClub === studentClub){
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Nothing Available";
+    }
+
+    /*
+    if((studentGrade9 === "true" && studentGrade9 === teacherGrade9) ||
+    (studentGrade10 === "true" && studentGrade10 === teacherGrade10) ||
+    (studentGrade11 === "true" && studentGrade11 === teacherGrade11) ||
+    (studentGrade12 === "true" && studentGrade12 === teacherGrade12) &&
+    teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther) &&
+    teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if(teacherClub === studentClub) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Nothing Available";
+    }
+    */
+
+    /*
+    //possible code that can work which looks for not an exact search which I know why it doesn't work but can't think of any modifications that should be implemented
+    if (((studentGrade9 === "true" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "true" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "true" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "true" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "true" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "false" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "false" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "false" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry, nothing available";
+    }
+
+    if (((studentGrade9 === "false" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "false" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "false" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "false" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "false" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry, nothing available";
+    }
+
+    if (((studentGrade9 === "false" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "false" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "false" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "false" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "false" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "false" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "false" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "false" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry, nothing available";
+    }
+
+    if (((studentGrade9 === "true" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "true" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "true" && teacherGrade11 === studentGrade11) ||
+    (studentGrade12 === "true" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry, nothing available";
+    }*/
+
+    //other code that I have tried for not an exact search
+    /*if(((studentGrade9 === "true" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "true" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "true" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "true" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "true" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "false" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "false" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "false" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+       document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if (((studentGrade9 === "false" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "false" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "false" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "false" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "false" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if (((studentGrade9 === "false" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "false" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "false" && teacherGrade11 === studentGrade11) ||
+    (studentGradeAll === "false" && teacherGradeAll === studentGradeAll) ||
+    (studentGrade12 === "false" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "false" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "false" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "false" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else if (((studentGrade9 === "true" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "true" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "true" && teacherGrade11 === studentGrade11) ||
+    (studentGrade12 === "true" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry, nothing available";
+    } */
+
+    //working code that looks for exact search
+    /* if(((studentGrade9 === "true" && teacherGrade9 === studentGrade9) ||
+    (studentGrade10 === "true" && teacherGrade10 === studentGrade10) ||
+    (studentGrade11 === "true" && teacherGrade11 === studentGrade11) ||
+    (studentGrade12 === "true" && teacherGrade12 === studentGrade12)) &&
+    ((studentGenderFemale === "true" && (teacherGenderFemale === studentGenderFemale)) ||
+    (studentGenderMale === "true" && teacherGenderMale === studentGenderMale) ||
+    (studentGenderOther === "true" && teacherGenderOther === studentGenderOther)) &&
+    (teacherClub === studentClub)) {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = teacherDetails;
+    } else {
+        document.getElementById("htmlSAnnouncementDetail").innerHTML = "Sorry...";
+    } */
+}

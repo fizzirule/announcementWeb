@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>North Park: Student Result Page</title>
+        <script src="studentsResult.js"></script>
+    </head>
+    <body onload="displayResults()">
+        <div id="htmlLogo">
+            <img src="northParkLogo.png" width="120" height="120">
+            <h1>North Park</h1>
+        </div>
+        <!--Right Student Log in with Logo-->
+        <div id="htmlStudentLogin">
+            <img src="studentlogin.png" width="100" height="100">
+        <!--Drop-down student login options to navigate to pages-->
+            <form>
+                <select>
+                    <option value="Announcement Search Page">Announcement Search Page</option>
+                    <option value="Planning">Planning</option>
+                </select>
+            </form>
+        </div>
+         <!--Heading of the page "Results"-->
+        <h1>Results</h1>
+        <p id="htmlSAnnouncementDetail"></p>
+        <!--Button for searching results-->
+        <a href="studentSearchPage"><button>Take me to Search!</button></a>
+    </body>
+</html>

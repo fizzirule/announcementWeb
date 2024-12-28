@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>North Park: Announcement Search Page</title>
+    </head>
+    <body>
+        <!--Top bar with North Park Logo and Name-->
+        <div id="htmlLogo">
+            <img src="northParkLogo.png" width="120" height="120">
+            <h1>North Park</h1>
+        </div>
+        <!--Right Student Log in with Logo-->
+        <div id="htmlStudentLogin">
+            <img src="studentlogin.png" width="100" height="100">
+        <!--Drop-down student login options to navigate to pages-->
+            <form>
+                <select>
+                    <option value="Planning">Planning</option>
+                </select>
+            </form>
+        </div>
+         <!--Heading of the page "Announcement Search Page-->
+        <h1>Announcement Search Page</h1>
+        <br>
+        <!--Grades heading-->
+        <div id="htmlSGrades">
+            <h2>Grade</h2>
+            <form>
+        <!--Checkbox for grades-->
+                <input id="htmlSGrade9" type="checkbox">
+                <label id="htmlSGrade9">Grade 9</label>
+                <input id="htmlSGrade10" type="checkbox">
+                <label id="htmlSGrade10">Grade 10</label>
+                <input id="htmlSGrade11" type="checkbox">
+                <label id="htmlSGrade11">Grade 11</label>
+                <input id="htmlSGrade12" type="checkbox">
+                <label id="htmlSGrade12">Grade 12</label>
+                <input id="htmlSAllGrades" type="checkbox">
+                <label id="htmlSAllGrades">All Grades</label>
+            </form>
+        </div>
+        <!--Clubs heading-->
+        <div id="htmlSClubs">
+            <h2>Club</h2>
+        <!--Dropdown list for clubs-->
+            <select id="htmlSClub" name="htmlSClub">
+                <option value="HackClub">Hack Club</option>
+                <option value="DECA">DECA</option>
+                <option value="HOSA">HOSA</option>
+                <option value="FilmClub">Film Club</option>
+            </select>
+        </div>
+        <!--Gender heading-->
+        <div id="htmlSGender">
+        <!--Checkbox for gender-->
+            <h2>Gender</h2>
+            <input id="htmlSFemale" type="checkbox">
+            <label id="htmlSFemale">Female</label>
+            <input id="htmlSMale" type="checkbox">
+            <label id="htmlSMale">Male</label>
+            <input id="htmlSOther" type="checkbox">
+            <label id="htmlSOher">Other</label>
+            <input id="htmlSAll" type="checkbox">
+            <label id="htmlSAll">All</label>
+        </div>
+        <br>
+        <!--Button for searching results-->
+        <a href="studentResult.html"><button onclick="getStudentData()">Search for Results!</button></a>
+        <script src="studentSearch.js"></script>
+    </body>
+</html>

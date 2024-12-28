@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>North Park: Teacher Announcement Creator Page</title>
+    <script src="teacher.js"></script>
+</head>
+
+<body>
+    <!--Top bar with North Park Logo and Name-->
+    <div id="htmlLogo">
+        <img src="northParkLogo.png" width="120" height="120">
+        <h1>North Park</h1>
+    </div>
+    <!--Right Teacher Log in with Logo-->
+    <div id="htmlTeacherLogin">
+        <img src="teacherlogin.png" width="100" height="100">
+        <!--Drop-down teacher login options to navigate to pages-->
+        <form>
+            <select>
+                <option value="Announcement Creation Page">Announcement Creation Page</option>
+                <option value="Planning Calendar">Planning Calendar</option>
+                <option value="Other Announcements">Other Announcements</option>
+                <option value="Log Out">Log Out</option>
+            </select>
+        </form>
+    </div>
+    <!--Heading of the page "Teacher Announcement Creator Page"-->
+    <h1>Teacher Announcement Creator Page</h1>
+    <br>
+    <!--Grades heading-->
+    <div id="htmlTGrades">
+        <h2>Grade</h2>
+        <form>
+            <!--Checkbox for grades-->
+            <input id="htmlTGrade9" type="checkbox">
+            <label id="htmlTGrade9">Grade 9</label>
+            <input id="htmlTGrade10" type="checkbox">
+            <label id="htmlTGrade10">Grade 10</label>
+            <input id="htmlTGrade11" type="checkbox">
+            <label id="htmlTGrade11">Grade 11</label>
+            <input id="htmlTGrade12" type="checkbox">
+            <label id="htmlTGrade12">Grade 12</label>
+            <input id="htmlTAllGrades" type="checkbox">
+            <label id="htmlTAllGrades">All Grades</label>
+        </form>
+    </div>
+    <!--Clubs heading-->
+    <div id="htmlTClubs">
+        <h2>Club</h2>
+        <!--Dropdown list for clubs-->
+        <select name="htmlTClubsList" id="htmlTClub">
+            <option value="HackClub">Hack Club</option>
+            <option value="FilmClub">Film Club</option>
+            <option value="DECA">DECA</option>
+            <option value="HOSA">HOSA</option>
+        </select>
+        <button>Add a Club</button>
+    </div>
+    <!--Gender heading-->
+    <div id="htmlTGender">
+        <!--Checkbox for gender-->
+        <h2>Gender</h2>
+        <input id="htmlTFemale" type="checkbox">
+        <label id="htmlTFemale">Female</label>
+        <input id="htmlTMale" type="checkbox">
+        <label id="htmlTMale">Male</label>
+        <input id="htmlTOther" type="checkbox">
+        <label id="htmlTOther">Other</label>
+        <input id="htmlTAll" type="checkbox">
+        <label id="htmlTAll">All</label>
+    </div>
+    <br>
+    <!--Announcement details box-->
+    <div id="htmlTAnnouncement">
+        <h2>Write your announcement in the space below:</h2>
+        <textarea id="htmlTAnnouncementDetail" rows="6" cols="90"
+            placeholder="Write your announcement here!"></textarea>
+    </div>
+    <!--Options for formatting-->
+    <div>
+        <button>Font</button>
+        <button>B</button>
+        <button>I</button>
+        <button>U</button>
+        <input type="image" name="List" src="list.png" height="30" width="30">
+        <input type="image" name="Link" src="link.png" height="30" width="30">
+        <input type="image" name="Emoji" src="emoji.png" height="30" width="30">
+        <button onclick="getTeacherInput()">Save!</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+//setting the global variables that are going to be used in this page so that they can be accessed from anywhere throughout this code
+
+//global variables for each grade
+var teacherGrade9;
+var teacherGrade10;
+var teacherGrade11;
+var teacherGrade12;
+var teacherGradeAll;
+
+//global variables for each gender
+var teacherGenderFemale;
+var teacherGenderMale;
+var teacherGenderOther;
+var teacherGenderAll;
+
+//global variables for each club and teacher announcement detail textarea
+var teacherClub;
+var teacherAnnouncementDetails;
+
+//this is the function that will be called which is on the button in the HTML page for teacher creator page when it is clicked
+function getTeacherInput() {
+   /*when the specific grade checkboxes are chosen, the global variables are declared to get the elements by their ids, and the keys, which are custom named to the
+    specific variable, will set the item to store the values in the local storage which will be accessed when needed. */
+    teacherGrade9 = document.getElementById("htmlTGrade9").checked;
+    localStorage.setItem("teacherGrade9Key", teacherGrade9);
+    teacherGrade10 = document.getElementById("htmlTGrade10").checked;
+    localStorage.setItem("teacherGrade10Key", teacherGrade10);
+    teacherGrade11 = document.getElementById("htmlTGrade11").checked;
+    localStorage.setItem("teacherGrade11Key", teacherGrade11);
+    teacherGrade12 = document.getElementById("htmlTGrade12").checked;
+    localStorage.setItem("teacherGrade12Key", teacherGrade12);
+    teacherGradeAll = document.getElementById("htmlTAllGrades").checked;
+    localStorage.setItem("teacherGradeAllKey", teacherGradeAll);
+
+    /*when the specific gender checkboxes are chosen, the global variables are declared to get the elements by their ids, and the keys, which are custom named to the
+    specific variable, will set the item to store the values in the local storage which will be accessed when needed. */
+    teacherGenderFemale = document.getElementById("htmlTFemale").checked;
+    localStorage.setItem("teacherGenderFemaleKey", teacherGenderFemale);
+    teacherGenderMale = document.getElementById("htmlTMale").checked;
+    localStorage.setItem("teacherGenderMaleKey", teacherGenderMale);
+    teacherGenderOther = document.getElementById("htmlTOther").checked;
+    localStorage.setItem("teacherGenderOtherKey", teacherGenderOther);
+    teacherGenderAll = document.getElementById("htmlTAll").checked;
+    localStorage.setItem("teacherGenderAllKey", teacherGenderAll);
+
+    /*when a specific club is chosen from the dropdown list, the global variable will get the element by its id, and the kes, which is custom named to the
+    variable, will set the item to store the specific value in the local storage. */
+    teacherClub = document.getElementById("htmlTClub").value;
+    localStorage.setItem("teacherClubKey", teacherClub);
+
+    /*when the annoucement is written in the text area and the submit button is pressed, the message will be saved into the local storage with a key and 
+    value for storage.*/
+    teacherAnnouncementDetails = document.getElementById("htmlTAnnouncementDetail").value;
+    localStorage.setItem("teacherAnnouncementDetailsKey", teacherAnnouncementDetails);
+}

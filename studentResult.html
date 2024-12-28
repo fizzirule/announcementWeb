@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>North Park: Student Result Page</title>
+        <script src="studentsResult.js"></script>
+        <link rel="stylesheet" href="studentResult.css">
+                <!--IMPORTED FONT CODE-->
+            <!--MONTSERRAT-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+            <!--RED HAT DISPLAY-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+            <!--PUBLIC SANS-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap" rel="stylesheet">
+            <!--OPEN SANS EXTRA BOLD-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+            <!--LEXEND DECA-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Red+Hat+Display:wght@300&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body onload="displayResults()">
+        <!--Top bar with North Park Logo and Name-->
+        <div id="htmlLogo">
+            <img id="headerPic" src="northParkLogo.png" width="120" height="120">
+            <h1 id="northPark">North Park</h1>
+        </div>
+        <!--Right Student Log in with Logo-->
+        <img id="studBut" src="studentlogin.png" width="100" height="100">
+        <div id="htmlStudentLogin">
+            <!--Drop-down student login options to navigate to pages-->
+            <button class="student">Student</button>
+                <div id="studentLoginContents">
+                    <a href="studentSearchPage.html">Announcement Search Page</a>
+                    <div class="divider"></div>
+                    <a href="studentPlanning.html">Planning</a>
+                </div>
+            </div>
+        <button class="arrow"></button>
+        </div>
+        <!--Heading of the page "Results"-->
+        <h1 id="start">Results</h1>
+        <p id="htmlSAnnouncementDetail"></p>
+        <!--Button for searching results-->
+        <a href="studentSearchPage.html"><button class="submit">Take me to Search!</button></a>
+    </body>
+</html>
+

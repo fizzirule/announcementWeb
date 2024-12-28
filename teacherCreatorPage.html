@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>North Park: Teacher Announcement Creator Page</title>
+        <script src="teacher.js"></script>
+        <link rel="stylesheet" href="teacherCreatorPage.css">
+        <!--IMPORTED FONT CODE-->
+        <!--MONTSERRAT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <!--RED HAT DISPLAY-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+        <!--PUBLIC SANS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap" rel="stylesheet">
+        <!--OPEN SANS EXTRA BOLD-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+        <!--LEXEND DECA-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Red+Hat+Display:wght@300&display=swap"
+        rel="stylesheet">
+    </head>
+
+    <body onload="getExistingAnnouncements()">
+        <!--Top bar with North Park Logo and Name-->
+        <div id="htmlLogo">
+            <img id="headerPic" src="northParkLogo.png" width="120" height="120">
+            <h1 id="northPark">North Park</h1>
+        </div>
+        <!--Right Teacher Log in with Logo-->
+        <img id="teachBut" src="teacherlogin.png" width="100" height="100">
+        <div id="htmlTeacherLogin">
+            <!--Drop-down teacher login options to navigate to pages-->
+            <button class="teacher">Teacher Login</button>
+            <div id="teacherLoginContents">
+                <a href="teacherCreatorPage.html">Announcement Creation Page</a>
+                <div class="divider"></div>
+                <a href="teacherPlanning.html">Planning Calendar</a>
+                <div class="divider"></div>
+                <a href="otherAnnouncement.html">Other Announcements</a>
+                <div class="divider"></div>
+                <a href="schoolLogin.html">Log Out</a>
+            </div>
+        </div>
+        <button class="arrow"></button>
+        <!--Heading of the page "Teacher Announcement Creator Page"-->
+        <h1 id="start">Teacher Announcement Creator Page</h1>
+        <br>
+        <!--Grades heading-->
+        <div id="htmlTGradesDIV">
+            <h2 id="htmlTGrades">Grade</h2>
+            <button class="arrowGR"></button>
+            <form>
+                <!--Checkbox for grades-->
+                <label id="styling" class="labelCheck">
+                    <input type="checkbox" id="htmlTGrade9">
+                    <span class="customCheck"></span>
+                    9
+                </label>
+                <label id="styling" class="labelCheck">
+                    <input type="checkbox" id="htmlTGrade10">
+                    <span class="customCheck"></span>
+                    10
+                </label>
+                <label id="styling" class="labelCheck">
+                    <input type="checkbox" id="htmlTGrade11">
+                    <span class="customCheck"></span>
+                    11
+                </label>
+                <label id="styling" class="labelCheck">
+                    <input type="checkbox" id="htmlTGrade12">
+                    <span class="customCheck"></span>
+                    12
+                </label>
+                <label id="styling" class="labelCheck">
+                    <input type="checkbox" id="htmlTAllGrades">
+                    <span class="customCheck"></span>
+                    All Grades
+                </label>
+            </form>
+        </div>
+        <!--Clubs heading-->
+        <div id="htmlTClubsDIV">
+            <h2 id="htmlTClubs">Club</h2>
+            <button class="arrowC"></button>
+            <div class="dropdownShow"></div>
+            <!--Dropdown list for clubs-->
+            <select name="htmlTClubsList" id="htmlTClub">
+                <option value="start">Click to Select One!</option>
+                <option value="hackClub">Hack Club</option>
+                <option value="filmClub">Film Club</option>
+                <option value="DECA">DECA</option>
+                <option value="HOSA">HOSA</option>
+                <option value="ecoClub">Eco Club</option>
+                <option value="countingOnYou(COY)">Counting On You (COY)</option>
+                <option value="stempire">Stempire</option>
+                <option value="modelUN">Model UN</option>
+                <option value="girls'Group">Girls' Group</option>
+                <option value="blackDiamonds">Black Diamonds</option>
+                <option value="newcomer'sClub">Newcomer's Club</option>
+                <option value="investmentClub">Investment Club</option>
+                <option value="chessClub">Chess Club</option>
+                <option value="All">All Clubs</option>
+            </select>
+        </div>
+        <!--Gender heading-->
+        <div id="htmlTGenderDIV">
+            <!--Checkbox for gender-->
+            <h2 id="htmlTGender">Gender</h2>
+            <button class="arrowGE"></button>
+            <label id="styling" class="labelCheck">
+                <input id="htmlTFemale" type="checkbox">
+                <span class="customCheck"></span>
+                Female
+            </label>
+            <label id="styling" class="labelCheck">
+                <input id="htmlTMale" type="checkbox">
+                <span class="customCheck"></span>
+                Male
+            </label>
+            <label id="styling" class="labelCheck">
+                <input id="htmlTOther" type="checkbox">
+                <span class="customCheck"></span>
+                Other
+            </label>
+            <label id="styling" class="labelCheck">
+                <input id="htmlTAll" type="checkbox">
+                <span class="customCheck"></span>
+                All Genders
+            </label>
+        </div>
+        <br>
+        <!--Announcement details box-->
+        <div id="htmlTAnnouncement">
+            <h2 id="instructions">Write your announcement in the space below:</h2>
+            <textarea id="htmlTAnnouncementDetail"></textarea>
+        </div>
+        <a href="otherAnnouncement.html"><button class="submit" onclick="getTeacherInput()">Save!</button></a>
+    </body>
+</html>
